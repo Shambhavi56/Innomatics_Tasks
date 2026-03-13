@@ -1,4 +1,7 @@
 from fastapi import FastAPI
+from typing import Optional, List
+from pydantic import BaseModel, Field
+from fastapi import FastAPI
 
 app = FastAPI()
 
@@ -14,6 +17,8 @@ products = [
     {"id": 6, "name": "Mechanical Keyboard", "price": 2499, "category": "Electronics", "in_stock": True},
     {"id": 7, "name": "Webcam", "price": 1299, "category": "Electronics", "in_stock": False}
 ]
+
+
 
 
 @app.get("/")
@@ -122,3 +127,4 @@ def product_deals():
         "best_deal": cheapest,
         "premium_pick": expensive
     }
+    
