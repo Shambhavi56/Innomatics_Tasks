@@ -1,0 +1,35 @@
+=============================================================
+     RAG + HITL CUSTOMER SUPPORT BOT: SAMPLE TEST SUITE
+=============================================================
+Instructions: Copy and paste these questions into your terminal 
+when running graph_bot.py to test the different routing paths.
+
+--- USE CASE 1: IN-DOMAIN (Direct Retrieval) ---
+*Expected Behavior: Bot answers directly using Gemini and ChromaDB.*
+1. Can a 16-year-old apply for a credit card?
+2. What are the different types of credit cards available?
+3. What is the billing cycle for an India Card?
+4. How many reward points do I get if I spend Rs. 100?
+5. My card was stolen! What number should I call?
+
+--- USE CASE 2: IN-DOMAIN (Complex / Conditional) ---
+*Expected Behavior: Bot answers correctly by understanding conditions in the text.*
+6. Can I convert my Rs. 3000 purchase into an EMI?
+7. I am a firm, not a company. What do I need to submit to get a corporate card?
+8. How many Add-on cards can I get for my brothers and sisters?
+9. What are the charges if I withdraw cash from another bank's ATM?
+10. I didn't receive an SMS alert for my last transaction. What should I do?
+
+--- USE CASE 3: OUT-OF-DOMAIN (HITL Escalation Trigger) ---
+*Expected Behavior: Bot fails to find context, outputs "ESCALATE", and routes to Human Agent.*
+11. How do I apply for a home loan?
+12. What are the interest rates for a fixed deposit?
+13. Can you tell me the current stock price of Bank of India?
+14. How do I open a savings account?
+15. My HDFC credit card is not working, can you help?
+
+--- USE CASE 4: EDGE CASES & VAGUE QUERIES ---
+*Expected Behavior: Tests how the prompt handles incomplete information.*
+16. EMI rules.
+17. I want to increase limit.
+18. ATM charges.
